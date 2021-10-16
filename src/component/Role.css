@@ -1,0 +1,97 @@
+.newUser {
+    width: 95%;
+    flex: 4;
+    margin: 20px;
+    border-radius: 20px;
+    /* margin-top: 5rem; */
+  }
+  
+  .newUserForm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .newUserItem {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  .newUserItem1 {
+    width: 753px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+  
+  .newUserItem2 {
+    width: 148px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 26px;
+  }
+  
+  .newUserItem > ::placeholder {
+    width: 100%;
+  }
+  
+  .newUserItem > label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(151, 150, 150);
+  }
+  
+  .newUserItem > input {
+    height: 38px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+  }
+  
+  .newUserGender > input {
+    margin-top: 15px;
+  }
+  
+  .newUserGender > label {
+    margin: 10px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .newUserSelect {
+    height: 40px;
+    border-radius: 5px;
+  }
+  .userShow {
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin: 20px;
+  }
+  
+  .newUserButton {
+    width: 130px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    padding: 7px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    /* justify-content: space-between; */
+    /* align-content: space-between; */
+  }
+  .newUserTi {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 20px;
+    text-align: justify;
+    margin-bottom: inherit;
+  }
+  
