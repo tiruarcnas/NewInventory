@@ -18,6 +18,7 @@ import LeaveApplicationHR from "./LeaveApplicationHR.jsx";
 import NotFound404 from "../NotFound404.jsx";
 
 
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUsers,
@@ -32,6 +33,12 @@ faGlobeAmericas,
 faPlaceOfWorship,
 faArchway,
 } from "@fortawesome/free-solid-svg-icons";
+import hrCreateOrders from "./hrCreateOrders";
+import ActiveOrders from "./ActiveOrders";
+import ApprovedOrders from "./ApprovedOrders";
+import SavedOrders from "./SavedOrders";
+import PreviewOrders from "./PreviewOrders";
+import SetReminder from "./SetReminder";
 
 function RoleHRF() {
   return <Role />;
@@ -120,51 +127,51 @@ class DashboardHR extends Component {
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/salary">
+                  <Link to="/hr/hrCreateOrders">
                     <FontAwesomeIcon icon={faRupeeSign} className="sidebar-icon" /> 
-                    Salary 
+                    Create Orders
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/leave-application-hr">
+                  <Link to="/hr/ActiveOrders">
                     <FontAwesomeIcon icon={faFileAlt} className="sidebar-icon" /> 
-                    Leave Application 
+                    Active Orders  
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/company">
+                  <Link to="/hr/ApprovedOrders">
                     <FontAwesomeIcon icon={faCity} className="sidebar-icon" /> 
-                    company 
+                     Approved Orders
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/role">
+                  <Link to="/hr/SavedOrders">
                     <FontAwesomeIcon icon={faUsers} className="sidebar-icon" /> 
-                    Role 
+                    Saved Orders
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/position">
+                  <Link to="/hr/PreviewOrders">
                     <FontAwesomeIcon icon={faChair} className="sidebar-icon" /> 
-                    Position 
+                    Preview Orders
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/department">
+                  <Link to="/hr/SetReminder">
                     <FontAwesomeIcon
                       icon={faBuilding}
                       className="sidebar-icon"
                     /> 
-                    Department 
+                    Set Reminder 
                   </Link> 
                 </li>
                 <li>
                   <Link to="/hr/country">
                     <FontAwesomeIcon icon={faGlobeAmericas} className="sidebar-icon" /> 
-                    Country 
+                    Stock Management 
                   </Link> 
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/hr/state">
                     <FontAwesomeIcon icon={faPlaceOfWorship} className="sidebar-icon" /> 
                     State 
@@ -175,8 +182,8 @@ class DashboardHR extends Component {
                     <FontAwesomeIcon icon={faArchway} className="sidebar-icon" /> 
                     City 
                   </Link> 
-                </li>
-                <li>
+                </li>*/}
+                <li> 
                  
                 </li>
                 {/* <li> <a href=""><FontAwesomeIcon icon={faChair} className="sidebar-icon"/> Position</a>   </li> */}
@@ -196,19 +203,39 @@ class DashboardHR extends Component {
                   // exact
                   component={EmployeeF}
                 />
-                <Route
-                  path="/hr/salary"
+                 <Route
+                  path="/hr/hrCreateOrders"
                   exact
-                  component={SalaryF}
+                  component={hrCreateOrders}
                 />
                 <Route
-                  path="/hr/company"
+                  path="/hr/ActiveOrders"
                   exact
-                  component={CompanyF}
+                  component={ActiveOrders}
                 />
-                <Route path="/hr/role" component={RoleHRF} />
+                <Route
+                  path="/hr/ApprovedOrders"
+                  exact
+                  component={ApprovedOrders}
+                />
+                <Route
+                  path="/hr/SavedOrders"
+                  exact
+                  component={SavedOrders}
+                />
+                <Route
+                  path="/hr/PreviewOrders"
+                  exact
+                  component={PreviewOrders}
+                />
+                <Route
+                  path="/hr/SetReminder"
+                  exact
+                  component={SetReminder}
+                />
+                {/*<Route path="/hr/role" component={RoleHRF} />
                 {/* <Route path="/hr/role/form" exact component={RoleFormF} /> */}
-                <Route
+                {/* <Route
                   path="/hr/position"
                   exact
                   component={PositionF}
@@ -237,7 +264,7 @@ class DashboardHR extends Component {
                   path="/hr/leave-application-hr"
                   exact
                   component={LeaveApplicationHRF}
-                />
+                />  */}
                  {/* <Route
                   path="/hr/portal-master"
                   exact

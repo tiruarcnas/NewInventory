@@ -1,0 +1,97 @@
+.activeOrders {
+    width: 98%;
+    flex: 4;
+    margin: 20px;
+    border-radius: 20px;
+  
+    padding: 5px;
+  }
+  
+  .activeOrdersTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 20px;
+    text-align: justify;
+    margin-bottom: inherit;
+  }
+  
+  .activeOrdersTable {
+    width: 100%;
+    /* border: 0.5px solid black; */
+    border-spacing: 17px;
+    border-radius: 20px;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+  
+  thead {
+    border-bottom: 1px solid rgb(58, 185, 202);
+  }
+  
+  /* .productListTr:nth-child(even){
+      background-color: rgb(106, 136, 180);
+    } */
+  
+  .activeOrdersTh,
+  .activeOrdersTr {
+    text-align: inherit;
+    margin-left: 5px;
+  }
+  
+  .activeOrdersTr1 {
+    background-color: #7fa0c7;
+  }
+  
+  .activeOrdersUser {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  .activeOrdersImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .activeOrdersDate,
+  .activeOrdersAmount {
+    font-weight: 300;
+  }
+  
+  .activeOrdersButton {
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .activeOrdersButton.Approved {
+    background-color: #e5faf2;
+    color: #3bb077;
+  }
+  .activeOrdersButton.Declined {
+    background-color: #fff0f1;
+    color: #d95087;
+  }
+  Button.Pending {
+    background-color: #345292;
+    color: #2a7ade;
+  }
+  
+  .activeOrdersbutton {
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 10px;
+    margin-inline: auto;
+    border: none;
+    font-size: 15px;
+  }
+  
+  .activeOrdersbutton:hover {
+    background-color: turquoise;
+    cursor: pointer;
+  }

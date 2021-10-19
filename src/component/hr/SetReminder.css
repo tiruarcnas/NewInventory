@@ -1,0 +1,98 @@
+.setReminder {
+    width: 98%;
+    flex: 4;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    /* margin-top: 50px; */
+  }
+  
+  .setReminderForm {
+    margin-top: 10px;
+  }
+  
+  .setReminderTitle{
+      margin-left: 2rem;
+      margin-top: 1rem;
+      font-weight: 400;
+  }
+
+  .setReminderItem {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+  .setReminderItem > label {
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
+  
+  .setReminderItem > input {
+    max-width: 50%;
+    margin-inline: inherit;
+    padding: 5px;
+  }
+  
+  .setReminderItem4 {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+  .setReminderItem4 > label {
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .setReminderItem4 > textarea {
+    max-width: 50%;
+    margin: inherit;
+    padding: 40px;
+  }
+  
+  .setReminderItem5 {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+  .setReminderItem5 > label {
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .setReminderItem5 > input {
+    max-width: 50%;
+    margin: inherit;
+    padding: 5px;
+  }
+  
+  .setReminderItem > select {
+    padding: 10px;
+  }
+  
+  .setReminderButton {
+    margin-left: 90%;
+      margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
