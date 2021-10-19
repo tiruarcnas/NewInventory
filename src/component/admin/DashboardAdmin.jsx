@@ -12,8 +12,11 @@ import Department from "../Department.jsx";
 import AdminPortal from "./AdminPortal.jsx";
 import AdminProjectBid from "./AdminProjectBid.jsx";
 import NotFound404 from "../NotFound404.jsx";
-
-
+import AdminCreatOrder from "./AdminCreatOrdrs";
+import AdminSavedOrder from "./AdminSavedOrder";
+import AdminActiveOrder from "./AdminActiveOrder";
+import AdminPreviewOrder from "./AdminPreviewOrder";
+import AdminSetReminder from "./AdminSetReminder";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUsersCog,
@@ -23,6 +26,8 @@ import {
   faDollarSign,
   faTasks
 } from "@fortawesome/free-solid-svg-icons";
+import AdminSavedEdit from "./AdminSavedEdit";
+import AdminHome from "./AdminHome";
 
 function RoleAdminF() {
   return <Role />;
@@ -83,19 +88,25 @@ class DashboardAdmin extends Component {
               </div>
               <ul className="navbar-ul">
                 <li>
-                  <Link to="/admin/role">
+                  <Link to="/admin/home">
                     <FontAwesomeIcon icon={faUsers} className="sidebar-icon" /> 
                     Home
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/admin/position">
+                  <Link to="/admin/AdminCreatOrder">
                     <FontAwesomeIcon icon={faChair} className="sidebar-icon" /> 
                     CreateOrders
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/admin/department">
+                  <Link to="/admin/AdminSavedOrder">
+                    <FontAwesomeIcon icon={faChair} className="sidebar-icon" /> 
+                    SavedOrders
+                  </Link> 
+                </li>
+                <li>
+                  <Link to="/admin/AdminActiveOrder">
                     <FontAwesomeIcon
                       icon={faBuilding}
                       className="sidebar-icon"
@@ -104,7 +115,7 @@ class DashboardAdmin extends Component {
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/admin/project-bid">
+                  <Link to="/admin/AdminPreviewOrder">
                     <FontAwesomeIcon
                       icon={faDollarSign}
                       className="sidebar-icon"
@@ -113,7 +124,7 @@ class DashboardAdmin extends Component {
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/admin/portal-master">
+                  <Link to="/admin/AdminSetReminder">
                     <FontAwesomeIcon icon={faTasks} className="sidebar-icon" /> 
                     SetReminder
                   </Link> 
@@ -127,7 +138,7 @@ class DashboardAdmin extends Component {
               {/* //table */}
               {/* <RoleAdmin/> */}
               <Switch>
-                <Route exact path="/admin/role" component={RoleAdminF} />
+                <Route exact path="/admin/home" component={AdminHome} />
                 {/* <Route path="/admin/role/form" exact component={RoleFormF} /> */}
                 <Route
                   path="/admin/position"
@@ -148,6 +159,39 @@ class DashboardAdmin extends Component {
                   path="/admin/project-bid"
                   exact
                   component={AdminProjectBidF}
+                />
+                <Route
+                path="/admin/AdminCreatOrder"
+                exact
+                component={AdminCreatOrder}
+                />
+                <Route
+                path="/admin/AdminSavedOrder"
+                exact
+                component={AdminSavedOrder}
+                />
+                <Route
+                path="/admin/AdminActiveOrder"
+                exact
+                component={AdminActiveOrder}
+                />
+                
+                <Route
+                path="/admin/AdminPreviewOrder"
+                exact
+                component={AdminPreviewOrder}
+                />
+                
+                <Route
+                path="/admin/AdminSavedEdit/:id" render={(props) => <AdminSavedEdit {...props}/>}
+                />
+               
+
+
+                <Route
+                path="/admin/AdminSetReminder"
+                exact
+                component={AdminSetReminder}
                 />
                 {/* <Route
                   exact
