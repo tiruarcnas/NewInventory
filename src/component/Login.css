@@ -12,6 +12,8 @@ body {
   margin-left: -9rem;
   width: 85rem;
   height: 41rem;
+  /* max-width: 200%;
+  height: auto; */
 }
 .no-gutter{
   margin-left: 0rem;

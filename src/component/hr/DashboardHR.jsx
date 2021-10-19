@@ -39,6 +39,7 @@ import ApprovedOrders from "./ApprovedOrders";
 import SavedOrders from "./SavedOrders";
 import PreviewOrders from "./PreviewOrders";
 import SetReminder from "./SetReminder";
+import Home from "./Home"
 
 function RoleHRF() {
   return <Role />;
@@ -121,16 +122,16 @@ class DashboardHR extends Component {
               </div>
               <ul className="navbar-ul">
                 <li>
-                  <Link to="/hr/employee">
+                  <Link to="/hr/Home">
                     <FontAwesomeIcon icon={faUser} className="sidebar-icon" /> 
-                    User 
+                    Home 
                   </Link> 
                 </li>
                 <li>
                   <Link to="/hr/hrCreateOrders">
                     <FontAwesomeIcon icon={faRupeeSign} className="sidebar-icon" /> 
                     Create Orders
-                  </Link> 
+                  </Link>
                 </li>
                 <li>
                   <Link to="/hr/ActiveOrders">
@@ -198,11 +199,17 @@ class DashboardHR extends Component {
               {/* //table */}
               {/* <RoleHR/> */}
               <Switch>
-                <Route
+                {/* <Route
                   path="/hr/employee"
                   // exact
                   component={EmployeeF}
+                /> */}
+                <Route
+                  path="/hr/Home"
+                  exact
+                  component={Home}
                 />
+
                  <Route
                   path="/hr/hrCreateOrders"
                   exact
