@@ -1,0 +1,131 @@
+.userList {
+    width: 100%;
+    flex: 4;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    /* margin-top: 5rem; */
+  }
+  
+  .userListTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 15px;
+    text-align: justify;
+    margin-bottom: inherit;
+  }
+  
+  .userListTable {
+    width: 100%;
+    /* border: 0.5px solid black; */
+    border-spacing: 17px;
+    border-radius: 20px;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+  
+  thead {
+    border-bottom: 1px solid rgb(58, 185, 202);
+  }
+  
+  /* .productListTr:nth-child(even){
+    background-color: rgb(106, 136, 180);
+  } */
+  
+  .userListTr:nth-child(even) {
+    background-color: rgb(29, 192, 192);
+  }
+  
+  .userListTh,
+  .userListTr {
+    text-align: center;
+    margin-left: 5px;
+  }
+  
+  .userListTr1 {
+    background-color: #3bb077;
+  }
+  
+  .userListUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    padding: 10px;
+  }
+  
+  .userListImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .userListDate,
+  .userListAmount {
+    font-weight: 300;
+  }
+  
+  .userListButton {
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .userListButton.Approved {
+    background-color: #e5faf2;
+    color: #3bb077;
+  }
+  .userListButton.Declined {
+    background-color: #fff0f1;
+    color: #d95087;
+  }
+  Button.Pending {
+    background-color: #345292;
+    color: #545e6b;
+  }
+  
+  .userListbutton {
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userListEditIcon{
+      /* text-decoration: none; */
+      background-color: #3bb077;
+  }
+  
+  .userListEditIcon:hover{
+    /* text-decoration: none; */
+    background-color: #0e0f0f;
+    border-radius: 1rem;
+    color: #e5faf2;
+  }
+  
+  .userListbutton:hover{
+    background-color:red;
+    border-radius: 1rem;
+   
+  }
+  
+  .userListDelete{
+    margin-top:5px;
+    color:rgb(20, 13, 13);
+    cursor: pointer;
+  }
+  
+  .userListDelete:hover {
+    /* background-color: rgb(9, 10, 10); */
+    cursor: pointer;
+    border-radius: 1rem;
+    color: #ff0000;
+  
+  }
+  
