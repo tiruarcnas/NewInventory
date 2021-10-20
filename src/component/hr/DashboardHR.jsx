@@ -33,13 +33,16 @@ faGlobeAmericas,
 faPlaceOfWorship,
 faArchway,
 } from "@fortawesome/free-solid-svg-icons";
-import hrCreateOrders from "./hrCreateOrders";
+import StockManagement from "./StockManagement";
 import ActiveOrders from "./ActiveOrders";
 import ApprovedOrders from "./ApprovedOrders";
+import RejectedOrders from "./RejectedOrders";
 import SavedOrders from "./SavedOrders";
 import PreviewOrders from "./PreviewOrders";
 import SetReminder from "./SetReminder";
-import Home from "./Home"
+import VendorManagement from "./VendorManagement";
+import Home from "./Home";
+import AddVendor from "./Vendor/AddVendor";
 
 function RoleHRF() {
   return <Role />;
@@ -127,12 +130,12 @@ class DashboardHR extends Component {
                     Home 
                   </Link> 
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/hr/hrCreateOrders">
                     <FontAwesomeIcon icon={faRupeeSign} className="sidebar-icon" /> 
                     Create Orders
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/hr/ActiveOrders">
                     <FontAwesomeIcon icon={faFileAlt} className="sidebar-icon" /> 
@@ -143,6 +146,12 @@ class DashboardHR extends Component {
                   <Link to="/hr/ApprovedOrders">
                     <FontAwesomeIcon icon={faCity} className="sidebar-icon" /> 
                      Approved Orders
+                  </Link> 
+                </li>
+                <li>
+                  <Link to="/hr/RejectedOrders">
+                    <FontAwesomeIcon icon={faCity} className="sidebar-icon" /> 
+                     Rejected Orders
                   </Link> 
                 </li>
                 <li>
@@ -167,9 +176,21 @@ class DashboardHR extends Component {
                   </Link> 
                 </li>
                 <li>
-                  <Link to="/hr/country">
+                  <Link to="/hr/StockManagement">
                     <FontAwesomeIcon icon={faGlobeAmericas} className="sidebar-icon" /> 
                     Stock Management 
+                  </Link> 
+                </li>
+                <li>
+                  <Link to="/hr/VendorManagement">
+                    <FontAwesomeIcon icon={faGlobeAmericas} className="sidebar-icon" /> 
+                    Vendor Management 
+                  </Link> 
+                </li>
+                <li>
+                  <Link to="/hr/country">
+                    <FontAwesomeIcon icon={faGlobeAmericas} className="sidebar-icon" /> 
+                    Track Your Orders 
                   </Link> 
                 </li>
                 {/* <li>
@@ -210,11 +231,11 @@ class DashboardHR extends Component {
                   component={Home}
                 />
 
-                 <Route
+                 {/* <Route
                   path="/hr/hrCreateOrders"
                   exact
                   component={hrCreateOrders}
-                />
+                /> */}
                 <Route
                   path="/hr/ActiveOrders"
                   exact
@@ -224,6 +245,11 @@ class DashboardHR extends Component {
                   path="/hr/ApprovedOrders"
                   exact
                   component={ApprovedOrders}
+                />
+                <Route
+                  path="/hr/RejectedOrders"
+                  exact
+                  component={RejectedOrders}
                 />
                 <Route
                   path="/hr/SavedOrders"
@@ -239,6 +265,26 @@ class DashboardHR extends Component {
                   path="/hr/SetReminder"
                   exact
                   component={SetReminder}
+                />
+                <Route
+                  path="/hr/StockManagement"
+                  exact
+                  component={StockManagement}
+                />
+                <Route
+                  path="/hr/VendorManagement"
+                  exact
+                  component={VendorManagement}
+                />
+                <Route
+                  path="/hr/SetReminder"
+                  exact
+                  component={SetReminder}
+                />
+                <Route
+                  path="/hr/AddVendor"
+                  exact
+                  component={AddVendor}
                 />
                 {/*<Route path="/hr/role" component={RoleHRF} />
                 {/* <Route path="/hr/role/form" exact component={RoleFormF} /> */}

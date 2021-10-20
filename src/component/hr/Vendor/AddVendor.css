@@ -1,0 +1,165 @@
+.vendorAdd {
+    width: 100%;
+    flex: 4;
+    padding: 20px;
+    border-radius: 20px;
+    }  
+
+.vendorAddTitleContainer {
+    display: flex;
+    /* width: 15%; */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    font-size: larger;
+    justify-content:flex-start;
+    max-width: 194%;
+}
+
+ .vendorAddTitle1{
+     display: inline-flex;
+     color: rgb(0, 0, 0);
+     font-size: 16px;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-decoration: none;
+    /* background-color: rgb(70, 247, 247); */
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+} 
+
+.vendorAddTitle2{
+    margin-left: 1rem ;
+    display: inline-flex;
+     color: rgb(0, 0, 0);
+     font-size: 16px;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-decoration: none;
+    /* background-color: rgb(70, 247, 247); */
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+} 
+
+.vendorAddTable {
+    width: 100%;
+    /* border: 0.5px solid black; */
+    border-spacing: 17px;
+    border-radius: 20px;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  }
+
+  .vendorAddTh,
+  .vendorAddTr {
+    text-align: inherit;
+    margin-left: 5px;
+  }
+        
+.vendorAddAddButton {
+      width: 80px;
+      border: none;
+      padding: 5px;
+      background-color: teal;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-size: 16px;
+    }
+    
+    .vendorAddContainer {
+      display: flex;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+    
+    
+    .vendorAddUpdate{
+      flex: 2;
+      padding: 20px;
+      -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      max-width:100%;
+      flex-direction: column;
+    }
+    
+  
+    .vendorAddUpdateTitle{
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .vendorAddUpdateForm{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .vendorAddUpdateItem{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+    
+    .vendorAddUpdateItem>label{
+        margin-bottom: 0px;
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+    
+    .vendorAddUpdateInput{
+        width: 250px;
+        height: 30px;
+        margin-left: 50px;
+        border-radius: 5px;
+        border: 1px solid gray;
+    }
+    
+    .vendorAddUpdateRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  
+    .vendorAddUpdateLeft{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  
+    .vendorAddUpdateUpload{
+        display: flex;
+        align-items: center;
+    }
+    
+    .vendorAddUpdateImg{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 20px;
+        margin-left: 538px;
+    }
+    
+    .vendorAddUpdateIcon{
+        cursor: pointer;
+    }
+    
+    .vendorAddUpdateButton{
+        display: flex;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        background-color: darkblue;
+        color: white;
+        font-weight: 600;
+    }
