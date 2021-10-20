@@ -1,5 +1,5 @@
 body {
-  background-color: #2b447b;
+  background-color: #f6f8fa;
   /* background-image: 'url(https://wallpapercave.com/wp/wp2264290.jpg)'; 
   background-repeat: no-repeat;*/
 }
@@ -9,9 +9,9 @@ body {
 
 .containerImg{
   opacity:initial;
-  margin-left: -9rem;
-  width: 85rem;
-  height: 41rem;
+  margin-left: -18rem;
+  width: 101.7rem;
+  height: 49.3rem;
   /* max-width: 200%;
   height: auto; */
 }
@@ -24,7 +24,7 @@ body {
   background-color:#7ad3e7;
   width: 93%;
   max-width: 433px;
-  margin: auto;
+  margin: 139px;
   margin-top: 32%;
   padding: 32px;
   border-radius: 19px;

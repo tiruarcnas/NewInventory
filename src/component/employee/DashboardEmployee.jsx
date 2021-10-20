@@ -80,7 +80,7 @@ class DashboardHR extends Component {
                       icon={faUser}
                       className="sidebar-icon"
                     />
-                    Personal Information
+                   Home
                   </Link>
                 </li>
                 <li>
@@ -93,7 +93,7 @@ class DashboardHR extends Component {
                       icon={faUniversity}
                       className="sidebar-icon"
                     />
-                    Education
+                   ActiveOrders
                   </Link>
                 </li>
                 <li>
@@ -104,7 +104,7 @@ class DashboardHR extends Component {
                       icon={faMale}
                       className="sidebar-icon"
                     />
-                    Dependents
+                   SavedOrders
                   </Link>
                 </li>
                 <li>
@@ -115,7 +115,7 @@ class DashboardHR extends Component {
                       icon={faBriefcase}
                       className="sidebar-icon"
                     />
-                    WorkExp
+                  ApprovedOrders
                   </Link>
                 </li>
                 <li>
@@ -126,9 +126,39 @@ class DashboardHR extends Component {
                       icon={faFileAlt}
                       className="sidebar-icon"
                     />
-                    Leave Application
+                   RejectOrders
                   </Link>
                 </li>
+
+
+                <li>
+                  <Link to={
+                      "/employee/" + this.props.data["_id"] + "/leave-application-emp"
+                    }>
+                    <FontAwesomeIcon
+                      icon={faFileAlt}
+                      className="sidebar-icon"
+                    />
+                   PreviewOrders
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to={
+                      "/employee/" + this.props.data["_id"] + "/leave-application-emp"
+                    }>
+                    <FontAwesomeIcon
+                      icon={faFileAlt}
+                      className="sidebar-icon"
+                    />
+                   SetReminders
+                  </Link>
+                </li>
+
+
+
+
+
               </ul>
             </div>
             {/* <div id="sidebar-top-content" /> */}

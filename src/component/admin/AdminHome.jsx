@@ -9,11 +9,8 @@ class AdminHome extends Component{
 
 <div className="home">
       <Calandar/>
-      {/* <FeaturedInfo /> */}
-      {/* <Chart data={userData} title="User Analytics" grid dataKey="Active User"/> */}
       <div className="homeWidgets">
-        {/* <WidgetSm/> */}
-        
+       
         <AdminActiveOrder/>
         
       </div>

@@ -73,6 +73,7 @@ class hrCreateOrders extends Component {
                 <Form.Control
                   type="text"
                   placeholder="Order Created By"
+                  value="InventoryAdmin"
                   required
                 />
               </Col>
@@ -86,6 +87,7 @@ class hrCreateOrders extends Component {
                 <Form.Control
                   type="text"
                   placeholder="Employee Id"
+                  value="6167fa0b4652cd15888a0817"
                   required
                 />
               </Col>
@@ -99,6 +101,7 @@ class hrCreateOrders extends Component {
                 <Form.Control
                   type="text"
                   placeholder="Department"
+                  value="Inventory"
                   required
                 />
               </Col>

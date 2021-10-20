@@ -753,6 +753,22 @@ app.get('/api/orderget', function(req, res){
 });
 
 
+
+// GET order incharge  ALL 
+app.get('/api/orderget1', function(req, res){
+  CreateOrder.find({},function(err, order){
+     if(err){
+         console.log(err);
+         res.json({msg: "failed"})
+     }
+     else {
+       if(order.ImportanceType==req.body.ImportanceType)
+         res.json(order);
+     }
+ })
+});
+
+
 // Saved Orders
 app.post('/api/savedorder', function (req, res) {
   //const CreateOrder = require('../models/CreateOrder');
@@ -794,6 +810,18 @@ app.get('/api/savedorderget', function(req, res){
  })
 });
 
+// GET saved ALL 
+app.get('/api/empget', function(req, res){
+  Employee.find({}, function(err, emp){
+     if(err){
+         console.log(err);
+         res.json({msg: "failed"})
+     }
+     else {
+         res.json(emp);
+     }
+ })
+});
 
 // GET SINGLE savedorder
 app.get('/api/singleorderget/:id', function(req, res){
@@ -804,6 +832,14 @@ app.get('/api/singleorderget/:id', function(req, res){
   });
 });
 
+// GET SINGLE Employee
+app.get('/api/emporderget/:id', function(req, res){
+
+  let query = { _id: req.params.id }
+  Employee.findById(query, function(err, emp1){
+      res.json(emp1);
+  });
+});
 // DELETE Saved Order
 app.post('/api/saved/delete/:id', function (req, res) {
 let query = { _id: req.params.id };
@@ -883,41 +919,41 @@ app.post('/api/update/:id', function (req, res) {
 
 
 
-app.get("/api/role", verifyAdminHR, (req, res) => {
-  Role.find()
-    .populate("company")
-    .exec(function (err, role) {
-      res.send(role);
-    });
-});
+// app.get("/api/role", verifyAdminHR, (req, res) => {
+//   Role.find()
+//     .populate("company")
+//     .exec(function (err, role) {
+//       res.send(role);
+//     });
+// });
 
-app.post("/api/role", verifyAdminHR, (req, res) => {
-  Joi.validate(req.body, RoleValidation, (err, result) => {
-    if (err) {
-      console.log(err);
-      res.status(400).send(err.details[0].message);
-    } else {
-      let newRole;
+// app.post("/api/role", verifyAdminHR, (req, res) => {
+//   Joi.validate(req.body, RoleValidation, (err, result) => {
+//     if (err) {
+//       console.log(err);
+//       res.status(400).send(err.details[0].message);
+//     } else {
+//       let newRole;
 
-      newRole = {
-        RoleName: req.body.RoleName,
-        company: req.body.CompanyID
-      };
+//       newRole = {
+//         RoleName: req.body.RoleName,
+//         company: req.body.CompanyID
+//       };
 
-      Role.create(newRole, function (err, role) {
-        if (err) {
-          console.log(err);
-          res.send("error");
-        } else {
-          res.send(role);
-          console.log("new Role Saved");
-        }
-      });
-      // }
-      console.log(req.body);
-    }
-  });
-});
+//       Role.create(newRole, function (err, role) {
+//         if (err) {
+//           console.log(err);
+//           res.send("error");
+//         } else {
+//           res.send(role);
+//           console.log("new Role Saved");
+//         }
+//       });
+//       // }
+//       console.log(req.body);
+//     }
+//   });
+// });
 
 // app.put("/api/role/:id", verifyAdminHR, (req, res) => {
 //   Joi.validate(req.body, RoleValidation, (err, result) => {

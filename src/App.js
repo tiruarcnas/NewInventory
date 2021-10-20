@@ -26,7 +26,7 @@ class App extends Component {
     loading: false,
     pass: true,
     isLogin: false,
-    firstTimeAlert: true,
+    //firstTimeAlert: true,
   };
   componentDidMount() {
     this.setState({
@@ -39,7 +39,7 @@ class App extends Component {
 
     }, () => {
       // temporary : for user to see user id and pass of all accounts to explore all features of app
-      this.alertFirstTime()
+      //this.alertFirstTime()
     });
 
   }
@@ -237,7 +237,7 @@ class App extends Component {
               decodedData["FirstName"] + " " + decodedData["LastName"]
             );
             this.componentDidMount();
-            history.push("#/admin/role");
+            history.push("#/admin/home");
           }
           if (decodedData.Account == 2) {
             // this.setState({ data: decodedData });
@@ -255,7 +255,7 @@ class App extends Component {
             );
             this.componentDidMount();
 
-            history.push("#/hr/employee");
+            history.push("#/hr/Home");
           }
           if (decodedData.Account == 3) {
             // this.setState({ data: decodedData });

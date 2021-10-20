@@ -11,7 +11,7 @@ class PreviewOrders extends Component {
     }
   }
   componentDidMount() {
-    axios.get('http://localhost:9000/api/orderget')
+    axios.get('http://localhost:4000/api/orderget')
     .then(res => {
         console.log(res);
         this.setState({ order: res.data })

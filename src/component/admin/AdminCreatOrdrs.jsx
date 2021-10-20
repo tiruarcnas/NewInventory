@@ -21,6 +21,7 @@ class AdminCreatOrder extends Component {
           AddComments: '',
           Status: 'pending',
           redirect: false,
+          emp:[]
         };
         this.handleProductNameChange = this.handleProductNameChange.bind(this);
         this.handleCASNumberChange = this.handleCASNumberChange.bind(this);
@@ -97,6 +98,14 @@ class AdminCreatOrder extends Component {
           });
       }
     
+      componentDidMount() {
+        axios.get(`http://localhost:4000/api/emporderget/${this.props.match.params.id}`)
+        .then(res => {
+            console.log(res);
+            this.setState({ emp: res.data })
+        });
+    }
+     
       savedorder = (event) => {
         event.preventDefault();
         const orderAdd2 = {
@@ -124,12 +133,16 @@ class AdminCreatOrder extends Component {
           });
       };
    render() {
+     //var data= this.state.emp;
     return (
+      
       <React.Fragment>
         <h2 id="role-form-title">Create Orders</h2>
         {/* <div id="role-form-outer-div">
           <div id="role-form-inner-div"> */}
-
+ {/* {data.length > 0 ? 
+                      data.map((user, i) => {                        
+                          return ( */}
         <div id="role-form-outer-div">
           <Form id="form"onSubmit={this.addCreate} method="post">
             <Form.Group as={Row}>
@@ -141,6 +154,7 @@ class AdminCreatOrder extends Component {
                   type="Text"
                   placeholder="Order Created By "
                   name="Order Created By"
+                  value="UserAdmin"
                   //required
                 />
               </Col>
@@ -154,6 +168,7 @@ class AdminCreatOrder extends Component {
                   type="Text"
                   placeholder="Employee ID "
                   name="Employee ID"
+                 value="6167fb7f4652cd15888a0818"
                   //required
                 />
               </Col>
@@ -167,6 +182,7 @@ class AdminCreatOrder extends Component {
                   type="Text"
                   placeholder="Department "
                   name="Department"
+                  value="User"
                  // required
                 />
               </Col>
@@ -354,6 +370,8 @@ class AdminCreatOrder extends Component {
           </Form>
           {this.state.redirect && <Redirect to={'/admin/AdminActiveOrder'} />}
         </div>
+         {/* )}
+         ):null} */}
       </React.Fragment>
     );
   }

@@ -3,20 +3,20 @@ import "./DashboardHR.css";
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { Switch } from "react-router";
 //import { Redirect } from "react-router-dom";
-import Role from "../Role.jsx";
+//import Role from "../Role.jsx";
 import NavBar from "../NavBar.jsx";
 //import RoleForm from "../RoleForm.jsx";
-import Position from "../Position.jsx";
-import Department from "../Department.jsx";
-import Country from "../Country.jsx";
-import State from "../State.jsx";
-import City from "../City.jsx";
-import Company from "../Company.jsx";
+//import Position from "../Position.jsx";
+//import Department from "../Department.jsx";
+//import Country from "../Country.jsx";
+//import State from "../State.jsx";
+//import City from "../City.jsx";
+//import Company from "../Company.jsx";
 import Employee from "../Employee.jsx";
-import Salary from "../Salary.jsx";
-import LeaveApplicationHR from "./LeaveApplicationHR.jsx";
+// import Salary from "../Salary.jsx";
+// import LeaveApplicationHR from "./LeaveApplicationHR.jsx";
 import NotFound404 from "../NotFound404.jsx";
-
+import { Redirect } from "react-router-dom";
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,38 +41,38 @@ import PreviewOrders from "./PreviewOrders";
 import SetReminder from "./SetReminder";
 import Home from "./Home"
 
-function RoleHRF() {
-  return <Role />;
-}
+// function RoleHRF() {
+//   return <Role />;
+// }
 
 
-function PositionF() {
-  return <Position />;
-}
-function DepartmentF() {
-  return <Department />;
-}
-function CountryF() {
-  return <Country />;
-}
-function StateF() {
-  return <State />;
-}
-function CityF() {
-  return <City />;
-}
-function CompanyF() {
-  return <Company />;
-}
-function EmployeeF() {
-  return <Employee />;
-}
-function SalaryF() {
-  return <Salary />;
-}
-function LeaveApplicationHRF() {
-  return <LeaveApplicationHR />;
-}
+// function PositionF() {
+//   return <Position />;
+// }
+// function DepartmentF() {
+//   return <Department />;
+// }
+// function CountryF() {
+//   return <Country />;
+// }
+// function StateF() {
+//   return <State />;
+// }
+// function CityF() {
+//   return <City />;
+// }
+// function CompanyF() {
+//   return <Company />;
+// }
+// function EmployeeF() {
+//   return <Employee />;
+// }
+// function SalaryF() {
+//   return <Salary />;
+// }
+// function LeaveApplicationHRF() {
+//   return <LeaveApplicationHR />;
+// }
 
 // function HRPortalF() {
 //   return <HRPortal />;
@@ -282,11 +282,11 @@ class DashboardHR extends Component {
                   exact
                   component={HRProjectBidF}
                 /> */}
-                {/* <Route
+                <Route
                   exact
                   path="/hr"
-                  render={() => <Redirect to="hr/employee" />}
-                /> */}
+                  render={() => <Redirect to="hr/Home" />}
+                />
                 <Route render={() => <NotFound404/>} />
                 
               </Switch>

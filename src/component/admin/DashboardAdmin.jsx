@@ -29,25 +29,25 @@ import {
 import AdminSavedEdit from "./AdminSavedEdit";
 import AdminHome from "./AdminHome";
 
-function RoleAdminF() {
-  return <Role />;
-}
-function RoleFormF() {
-  return <RoleForm />;
-}
+// function RoleAdminF() {
+//   return <Role />;
+// }
+// function RoleFormF() {
+//   return <RoleForm />;
+// }
 
-function PositionF() {
-  return <Position />;
-}
-function DepartmentF() {
-  return <Department />;
-}
-function AdminPortalF() {
-  return <AdminPortal />;
-}
-function AdminProjectBidF() {
-  return <AdminProjectBid />;
-}
+// function PositionF() {
+//   return <Position />;
+// }
+// function DepartmentF() {
+//   return <Department />;
+// }
+// function AdminPortalF() {
+//   return <AdminPortal />;
+// }
+// function AdminProjectBidF() {
+//   return <AdminProjectBid />;
+// }
 
 class DashboardAdmin extends Component {
   state = {
@@ -140,7 +140,7 @@ class DashboardAdmin extends Component {
               <Switch>
                 <Route exact path="/admin/home" component={AdminHome} />
                 {/* <Route path="/admin/role/form" exact component={RoleFormF} /> */}
-                <Route
+                {/* <Route
                   path="/admin/position"
                   exact
                   component={PositionF}
@@ -159,7 +159,7 @@ class DashboardAdmin extends Component {
                   path="/admin/project-bid"
                   exact
                   component={AdminProjectBidF}
-                />
+                /> */}
                 <Route
                 path="/admin/AdminCreatOrder"
                 exact
@@ -193,11 +193,11 @@ class DashboardAdmin extends Component {
                 exact
                 component={AdminSetReminder}
                 />
-                {/* <Route
+                <Route
                   exact
                   path="/admin"
-                  render={() => <Redirect to="/admin/role" />}
-                /> */}
+                  render={() => <Redirect to="/admin/home" />}
+                />
                 <Route render={() => 
 <NotFound404/>
                   // <Redirect to="/admin/role" />
