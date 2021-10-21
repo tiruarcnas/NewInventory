@@ -18,6 +18,7 @@ import AdminActiveOrder from "./AdminActiveOrder";
 import AdminPreviewOrder from "./AdminPreviewOrder";
 import AdminSetReminder from "./AdminSetReminder";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faUsersCog,
   faUsers,
@@ -28,6 +29,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import AdminSavedEdit from "./AdminSavedEdit";
 import AdminHome from "./AdminHome";
+import model from "./model/model";
 
 // function RoleAdminF() {
 //   return <Role />;
@@ -180,6 +182,11 @@ class DashboardAdmin extends Component {
                 path="/admin/AdminPreviewOrder"
                 exact
                 component={AdminPreviewOrder}
+                />
+                <Route
+                path="/admin/model/model"
+                exact
+                component={model}
                 />
                 
                 <Route

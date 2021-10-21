@@ -25,9 +25,9 @@
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   }
   
-  thead {
+  /* thead {
     border-bottom: 1px solid rgb(58, 185, 202);
-  }
+  } */
   
   /* .saveProductsTr:nth-child(even) {
     background-color: rgb(29, 192, 192);
@@ -46,10 +46,11 @@
     padding: 10px;
   }
   
-  .saveProductsTr1{
+  /* .saveProductsTr1{
     background-color: #1ad5e2;
   }
-  
+   */
+   
   .saveProductsImg {
     width: 40px;
     height: 40px;

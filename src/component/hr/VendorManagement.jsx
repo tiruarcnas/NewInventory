@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 export default function VendorAdd() {
+  // const Button = ({ type }) => {
+  //   return <button className={"userListButton " + type}>{type}</button>;
+  // };
 
     return (
         <div>
@@ -38,117 +41,38 @@ export default function VendorAdd() {
             <th className="vendorAddTh">Action</th>
           </tr>
           </thead>
-          
+          <tr className="vendorAddTr1">
+          <td className="vendorAddTd">
+            <span className="vendorAddTd"></span>
+          </td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd"></td>
+          <td className="vendorAddTd">
+            {/* <Button type="Saved"/> */}
+          </td>
+          <td className="productListTd"></td>
+          <td>
+            <Link to={"/"}>
+                          
+                            <button className="vendorAddEditIcon">Edit</button>
+                    
+            </Link>
+            &nbsp;&nbsp;
+             <button className="vendorAddDelete"  type ="submit">Delete</button>
+         {/* <button className="userListbutton" type ="submit" onClick={(e)=>{if(window.confirm(`Are you sure to delete this record?ID::`+save1._id)){this.deleteUser(save1._id,e)}}}>delete</button>  */}
+          </td>
+        </tr>
          
         </table>
       </div>
 
-      {/* </div>
-      <div className="vendorAddContainer">
-        <div className="vendorAddUpdate">
-          <form className="vendorAddUpdateForm">
-            <div className="vendorAddUpdateLeft">
-              <div className="vendorAddUpdateItem">
-                <label>Company Name</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Partner Since</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>SPOC</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>SPOC Email ID</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>SPOC Phone No</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Web Address</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Company Address</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Landline No</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Fax No</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Accounts SPOC</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-              <div className="vendorAddUpdateItem">
-                <label>Accounts Email ID</label>
-                <input
-                  type="text"
-                  placeholder=""
-                  className="vendorAddUpdateInput"
-                />
-              </div>
-               <button className="editUpdateButton">Add Vendor</button> 
-            </div>
-            <div className="vendorAddUpdateRight">
-              <div className="vendorAddUpdateUpload">
-              {/* <PictureAsPdfIcon /> 
-
-              </div>
-              <button className="vendorAddUpdateButton">Add Vendor</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      </div> */}
+      
         </div>
     )
 }

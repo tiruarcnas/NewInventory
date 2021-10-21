@@ -1,6 +1,8 @@
 import "./AdminActive.css";
 import React ,{Component} from 'react';
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import { Button,Modal} from 'react-bootstrap';
 class AdminActiveOrder extends Component {
   constructor(props) {
     super(props);
@@ -16,6 +18,18 @@ componentDidMount() {
         this.setState({ order: res.data })
     });
 }
+
+  // constructor(){  
+  //   super();  
+  //   this.state={  
+  //     show:false  
+  //   }  
+  // }  
+
+  handleModal(){  
+    this.setState({show:!this.state.show})  
+  } 
+
   render(){
   const Button = ({ type }) => {
     return <button className={"productListButton " + type}>{type}</button>;
@@ -43,7 +57,48 @@ componentDidMount() {
                           <tbody>
         <tr className="productListTr1">
           <td className="productListUser">
-            <span className="productListName">{user._id}</span>
+            <Link onClick={()=>this.handleModal()}><span className="productListName">{user._id}</span></Link>
+
+            <Modal show={this.state.show} onHide={()=>this.handleModal()}>  
+          <Modal.Header closeButton>{user._id}</Modal.Header>  
+          <Modal.Body>
+          <div className="container" style={{marginTop: "50px"}}>
+        <div className="card text-left">
+          {/* <div className="card-header">Name : {this.state.user.name}</div> */}
+              <div className="card-body"> 
+                <div className="row">
+                  <div className="col-lg-3">
+                  {/* <img className="img-thumbnail" style={{marginBottom: "10px"}} src={userImg} alt="user"/><br/>                                             */}
+                  </div>
+                  <div className="col-lg-9">
+                    <p className="card-text">Email : {user.ProductName}</p>                 
+                    <p className="card-text">Phone : {user.PackSize}</p>
+                    <p className="card-text">Job : {user.CASNumber}</p>
+                    <p className="card-text">Company :{user.ImportanceType}</p>
+                    {/* <p className="card-text">Age : {this.state.user.age}</p>                 
+                    <p className="card-text">City : {this.state.user.city}</p> */}
+                  </div>
+                </div>                                        
+                  <hr/>
+                  <div className="row" style={{marginLeft: "0px"}}>
+                    {/* <Link to={this.state.user._id+"/edit"}>
+                      <button className="btn btn-primary">Edit user</button>
+                    </Link>                   */}
+                    <form onSubmit={this.deleteUser}>
+                      <button type="submit" className="btn btn-danger" style={{marginLeft: "10px"}}>Delete</button>
+                    </form>
+                  </div> 
+                
+                  {/* {this.state.redirect && (
+                    <Redirect to={'/users'}/>
+                  )} */}
+
+              </div>
+          </div>
+      </div>
+            </Modal.Body>  
+         
+        </Modal>
           </td>
           <td className="productListDate">{user.ProductName}</td>
           <td className="productListAmount">{user.PackSize}</td>

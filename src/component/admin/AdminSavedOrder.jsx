@@ -44,7 +44,7 @@ class AdminSavedOrder extends Component {
             <div className="userList">
               <h3 className="userListTitle">SavedOrders</h3>
               <table className="userListTable">
-                <thead>
+                <thead className="userthead">
                 <tr className="userListTr">
                 <th className="userListTh">OrderID</th>
                   <th className="userListTh">Chemical Name</th>

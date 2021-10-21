@@ -26,9 +26,9 @@
   }
   
   thead {
-    border-bottom: 1px solid rgb(58, 185, 202);
-  }
-  
+    background-color: rgb(109, 154, 196);
+  } 
+   
   /* .productListTr:nth-child(even){
       background-color: rgb(106, 136, 180);
     } */
@@ -39,9 +39,9 @@
     margin-left: 5px;
   }
   
-  .productListTr1 {
+  /* .productListTr1 {
     background-color: #7fa0c7;
-  }
+  } */
   
   .productListUser {
     display: flex;
